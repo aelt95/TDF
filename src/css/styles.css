@@ -90,10 +90,11 @@ select {
 
 /* Buttons */
 .btn {
-  border: 1px solid var(--clr-txt1);
-  outline: none;
-  padding: 0.8rem 1.6rem;
+  border: none;
+  background-color: transparent;
+  padding: 0.4rem 0.8rem;
   color: var(--clr-txt1);
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -106,6 +107,8 @@ select {
 
 .btn-transparent {
   background-color: transparent;
+  border: 1px solid var(--clr-txt1);
+  border-radius: 10px;
 }
 
 /*
@@ -130,7 +133,9 @@ select {
 
 .navigator {
   display: flex;
+  cursor: pointer;
   justify-content: space-between;
+  align-items: center;
   font-size: var(--fs-ss);
 }
 
