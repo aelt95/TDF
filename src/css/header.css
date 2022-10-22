@@ -41,9 +41,11 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
-  font-size: 62.5%;
   background: linear-gradient(180deg, #16161a, #242629);
   margin: 0 5%;
+}
+html {
+  font-size: 62.5%;
 }
 
 /* Make images easier to work with */
@@ -76,17 +78,13 @@ select {
   --fs-ss: 1.2rem;
   --fs-s: 1.6rem;
   --fs-m: 2.4rem;
-  --fs-l: 3.6rem;
+  --fs-l: 5.6rem;
 
   /* font weights */
   --fw-s: 400;
   --fw-m: 500;
   --fw-l: 700;
 }
-
-/*
-  *Components
-*/
 
 /* Buttons */
 .btn {
@@ -95,6 +93,7 @@ select {
   padding: 0.4rem 0.8rem;
   color: var(--clr-txt1);
   cursor: pointer;
+  font-size: 24px;
 }
 
 .btn-primary {
@@ -105,23 +104,23 @@ select {
   background-color: var(--clr-txt1);
 }
 
-.btn-transparent {
+.btn-cc {
   background-color: transparent;
-  border: 1px solid var(--clr-txt1);
+  color: var(--clr-txt1);
+  font-weight: 700px;
+  font-size: 2.4rem;
+  border: 2px solid var(--clr-txt1);
+  padding: 8px 8px;
   border-radius: 10px;
 }
 
-/*
-  * STYLING
-*/
-
-/* Apply the font */
-
-.container {
+/* .container {
   max-width: 1440px;
   margin: 0 auto;
   padding: 1rem 2rem;
-}
+} */
+
+/* Header Section */
 
 .header {
   display: flex;
@@ -131,7 +130,7 @@ select {
   margin-top: 2%;
 }
 
-.navigator {
+.navigation {
   display: flex;
   cursor: pointer;
   justify-content: space-between;
@@ -139,7 +138,7 @@ select {
   font-size: var(--fs-ss);
 }
 
-.navigator ul {
+.navigation ul {
   display: flex;
   gap: 20px;
 }
@@ -150,4 +149,34 @@ select {
   font-weight: var(--fw-l);
   display: flex;
   align-items: center;
+  max-width: 600px;
+}
+
+.logo {
+  display: flex;
+  font-size: 36px;
+  font-weight: bolder;
+}
+
+/* responsive nav */
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .logo {
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 30px;
+    height: 250px;
+  }
+
+  #btn {
+    font-size: 16px;
+  }
 }
