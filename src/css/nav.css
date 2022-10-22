@@ -95,6 +95,7 @@ select {
   padding: 0.4rem 0.8rem;
   color: var(--clr-txt1);
   cursor: pointer;
+  font-size: 24px;
 }
 
 .btn-primary {
@@ -105,9 +106,13 @@ select {
   background-color: var(--clr-txt1);
 }
 
-.btn-transparent {
+.btn-cc {
   background-color: transparent;
-  border: 1px solid var(--clr-txt1);
+  color: var(--clr-txt1);
+  font-weight: 700px;
+  font-size: 24px;
+  border: 2px solid var(--clr-txt1);
+  padding: 8px 8px;
   border-radius: 10px;
 }
 
@@ -131,7 +136,7 @@ select {
   margin-top: 2%;
 }
 
-.navigator {
+.navigation {
   display: flex;
   cursor: pointer;
   justify-content: space-between;
@@ -139,7 +144,7 @@ select {
   font-size: var(--fs-ss);
 }
 
-.navigator ul {
+.navigation ul {
   display: flex;
   gap: 20px;
 }
@@ -150,4 +155,47 @@ select {
   font-weight: var(--fw-l);
   display: flex;
   align-items: center;
+  max-width: 600px;
 }
+
+.logo {
+  display: flex;
+  font-size: 36px;
+  font-weight: bolder;
+}
+
+/* responsive nav */
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    margin-right: 5px;
+  }
+
+  .navigation ul  {
+    gap: 5px;
+  }
+
+  .title {
+    height: 500px;
+    font-size: 50px;
+    margin: 20px;
+    
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .logo {
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 30px;
+    height: 250px;
+  }
+
+  #btn  {
+    font-size: 16px;
+  }
+}
+
+
