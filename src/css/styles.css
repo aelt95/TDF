@@ -21,6 +21,10 @@ li {
   list-style: none;
 }
 
+a {
+  color: var(--clr-txt1);
+}
+
 /* remove anchor link default styles */
 a {
   text-decoration: none;
@@ -36,6 +40,10 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+  background: linear-gradient(180deg, #16161a, #242629);
+  margin: 0 5%;
 }
 
 /* Make images easier to work with */
@@ -65,6 +73,7 @@ select {
   --clr-txt2: #94a1b2;
 
   /* font sizes */
+  --fs-ss: 1.2rem;
   --fs-s: 1.6rem;
   --fs-m: 2.4rem;
   --fs-l: 3.6rem;
@@ -81,24 +90,25 @@ select {
 
 /* Buttons */
 .btn {
-  border: 1px solid var(--clr-txt1);
-  outline: none;
-  padding: 0.8rem 1.6rem;
+  border: none;
+  background-color: transparent;
+  padding: 0.4rem 0.8rem;
+  color: var(--clr-txt1);
+  cursor: pointer;
 }
 
 .btn-primary {
   background-color: var(--clr-link);
-  color: var(--clr-txt1);
 }
 
 .btn-secondary {
   background-color: var(--clr-txt1);
-  color: var(--clr-link);
 }
 
 .btn-transparent {
   background-color: transparent;
-  color: var(--clr-txt1);
+  border: 1px solid var(--clr-txt1);
+  border-radius: 10px;
 }
 
 /*
@@ -106,12 +116,38 @@ select {
 */
 
 /* Apply the font */
-html {
-  font-family: "Poppins", sans-serif;
-}
 
 .container {
   max-width: 1440px;
   margin: 0 auto;
   padding: 1rem 2rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: var(--clr-txt1);
+  margin-top: 2%;
+}
+
+.navigator {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-ss);
+}
+
+.navigator ul {
+  display: flex;
+  gap: 20px;
+}
+
+.title {
+  height: 100vh;
+  font-size: var(--fs-l);
+  font-weight: var(--fw-l);
+  display: flex;
+  align-items: center;
 }
