@@ -70,9 +70,18 @@ select {
   /* colors */
   --clr-bg1: #16161a;
   --clr-bg2: #242629;
+  --clr-bg3: #fff;
   --clr-link: #7f5af0;
   --clr-txt1: #fffffe;
   --clr-txt2: #94a1b2;
+  --clr-txt3: #16161a;
+
+  /* Glowing logo colors */
+  --background_color: #0f0f10;
+  --text-color: rgb(233, 225, 225);
+  --pink: #ef087b;
+  --shadeBlue: #2a1c70;
+  --neon: #01d9fa;
 
   /* font sizes */
   --fs-ss: 1.2rem;
@@ -112,6 +121,9 @@ select {
   border: 2px solid var(--clr-txt1);
   padding: 8px 8px;
   border-radius: 10px;
+
+  /* Adding a margin left to give it a more mature look if  intended  for a reusable component  please  give  another class and add margin left*/
+  margin-left: 4rem;
 }
 
 /* .container {
@@ -156,6 +168,67 @@ select {
   display: flex;
   font-size: 36px;
   font-weight: bolder;
+
+  animation: glow 2s linear infinite;
+}
+
+/* Glowing logo code */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px var(--text-color), 0 0 20px var(--text-color),
+      0 0 30px var(--pink), 0 0 40px var(--pink), 0 0 50px var(--pink),
+      0 0 60px var(--pink), 0 0 70px var(--pink);
+  }
+
+  to {
+    text-shadow: 0 0 5px var(--shadeBlue), 0 0 25px var(--shadeBlue),
+      0 0 50px var(--shadeBlue), 0 0 100px var(--neon);
+  }
+}
+
+/* Hover features for the nav section */
+
+/* Underline From Right Animation */
+.btn-header {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.btn-header:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 100%;
+  right: 0;
+  bottom: 0;
+  background: var(--clr-bg3);
+
+  height: 4px;
+  -webkit-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.btn-header:hover:before,
+.btn-header:focus:before,
+.btn-header:active:before {
+  left: 0;
+}
+
+/* Contact-Us hover effect */
+.btn__contact-us:hover,
+.btn__contact-us:focus,
+.btn__contact-us:active {
+  background: var(--clr-bg3);
+  color: var(--clr-txt3);
+  cursor: pointer;
+  transition: all 0.5s;
 }
 
 /* responsive nav */
